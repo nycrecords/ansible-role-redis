@@ -11,7 +11,7 @@ def test_redis_config_exists(host):
     f = host.file("/etc/opt/rh/rh-redis5/redis.conf")
 
     assert f.exists
-    assert f.user == "root"
+    assert f.user == "redis"
     assert f.group == "root"
 
 
