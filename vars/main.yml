@@ -1,0 +1,4 @@
+---
+__redis_package: rh-redis5
+redis_daemon: rh-redis5-redis
+redis_conf_path: /etc/opt/rh/rh-redis5/redis.conf

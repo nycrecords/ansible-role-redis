@@ -2,27 +2,29 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
+  name: vagrant
+  provider:
+    name: virtualbox
 lint:
   name: yamllint
-  options:
-    config-file: molecule/default/yaml-lint.yml
 platforms:
   - name: instance
-    image: "geerlingguy/docker-${MOLECULE_DISTRO:-centos7}-ansible:latest"
-    command: ${MOLECULE_DOCKER_COMMAND:-""}
-    volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
-    privileged: true
-    pre_build_image: true
+    box: ${VAGRANT_DEFAULT_BOX:-generic/rhel7}
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
-  playbooks:
-    converge: ${MOLECULE_PLAYBOOK:-playbook.yml}
-scenario:
-  name: default
+  inventory:
+    host_vars:
+      instance:
+        http_proxy_protocol: http
+        http_proxy_hostname: bcpxy.nycnet
+        http_proxy_port: 8080
+        https_proxy_protocol: http
+        https_proxy_hostname: bcpxy.nycnet
+        https_proxy_port: 8080
+        rhsub_username: ${RHSM_USERNAME}
+        rhsub_password: ${RHSM_PASSWORD}
 verifier:
   name: testinfra
   lint:
