@@ -2,28 +2,16 @@
 dependencies: []
 
 galaxy_info:
-  author: geerlingguy
-  description: Redis for Linux
-  company: "Midwestern Mac, LLC"
+  role_name: redis
+  author: joelbcastillo
+  description: Redis for RedHat Enterprise Linux using SCL
+  company: "City of New York, Department of Records and Information Services"
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   platforms:
     - name: EL
       versions:
-        - 6
         - 7
-    - name: Fedora
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
-    - name: Archlinux
-      versions:
-        - all
   galaxy_tags:
     - database
     - development
