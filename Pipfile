@@ -9,6 +9,8 @@ ansible = "*"
 paramiko = "*"
 
 [packages]
+aws = "*"
+molecule = {extras = ["ec2"],version = "*"}
 
 [requires]
 python_version = "3.7"
