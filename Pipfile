@@ -9,7 +9,7 @@ ansible = "*"
 paramiko = "*"
 
 [packages]
-aws = "*"
+awscli = "*"
 molecule = {extras = ["ec2"],version = "*"}
 
 [requires]
