@@ -1,6 +1,9 @@
 ---
 dependency:
   name: galaxy
+  options:
+    role-file: molecule/resources/requirements.yml
+    roles-path: molecule/resources/roles
 driver:
   name: ec2
 lint:
@@ -16,7 +19,15 @@ provisioner:
     name: ansible-lint
   connection_options:
     ansible_user: ec2-user
+  playbooks:
+    converge: ../resources/playbooks/converge.yml
+    cleanup: ../resources/playbooks/cleanup.yml
+  env:
+    ANSIBLE_ROLES_PATH: ../resources/roles/
 verifier:
   name: testinfra
+  options:
+    verbose: true
+  directory: ../resources/tests/
   lint:
     name: flake8

@@ -1,3 +1,6 @@
 *.retry
 */__pycache__
 *.pyc
+
+molecule/resources/roles/
+!molecule/resources/roles/.gitkeep
