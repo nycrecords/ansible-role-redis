@@ -1,28 +1,24 @@
 language: python
 python:
-- 3.7
+  - 3.7
 env:
   global:
-  - MOLECULE_DEBUG: true
-  - ROLE_NAME: redis
-  - EC2_REGION: us-east-1
-  - secure: 19szmzIWxKkXrAJICCFO0qZCqrMlQ6YPn2kMlLliyDs/HZZ+yOFXpMNPOoHIaPpe4LKRtUKkRwbIOmWaCu7BTUX+LicWVaaImkC0jAWM5dRk2PZ4UX2cop2URovzdeWUELgDqpYKFgBifgt8jvLT2yE6MctIcE9CANvDZ7JX68D4dnWwqh+kGAOLRwrOHB7+t8NVyk/6MRgUxJly1PbG0K6eubFBfJ3N4Sah/mKwFlQtaW0cHlZfAKjACr+3Sdv8CJNWhWS3xd6BA505fh9317oGp09+zhQIihYQEnPdOHQW5wbFpKVm221xFN1coYV9sNxmQ3AL/bZTrORUljlHxbaBR1JT8FF6GUVjdeBumLG23ZyZKOgoME2xqjORWiM3vdd79dUn8atTrAoBMDorf0kTMxpy3MtCCuZtJ/WmJVyV95GjWhRikKUI/+GqLLlbghOS1tnh9Qb4ZzFF1yR8KclsZdxAtV5YwL45TkgS57q5kMWcb7WzkRq2hdHfgOjjrnthKDrG4JhrvpBsHvtWGKcGIGCB6hneyb9o58Vf7qD2db9bRpP9wVg4iC9jhVegUoHP36MhnMy3Y72ouqRqyZPSfR9CUaeE52XvKRs4slm58aR3Xv2/SgCFx4+dUOfnzNOD/PB9dDt8pjQbLW7yaS/LLEefY5JPFuQNdWoZ6fQ=
-  - secure: SMjxqEssxQlVTKgg8kngbU1nV6QLpb6H4B+Z0fUF/CZKcdCYL0dOA2PuZmdggWhs8xLzIu6XwRJ8csT5K6eTn+rFRYrbYlUuG3F9YHbLmINedZy76ZMUVr7XyyvD73Q0Et9kGKxWZ1bp8XCyDd5FH76ErIu0alQod8KRJ+HMuy8mtKrSAyrakONiQTp0FKRgpYAYyaPWM5GxDodrCE0y2d/bXYs6EaQA7g0aiRBJf8vIfRbKKjpGZzSoeyLhiR9GfgPIxtzuzryO/SPvx8sYITdhUFDv/ENRblUzVUzqhRT8YAcL+CNzpkJyQfeLHHVOZnHP35EKQ32vJ70NnzbnyYv8lRWL82C9MdmVo5rguEatLmx2HsUrGKLsCjIx+rEl6Y6vO2N6SaCMvtQqfhSrDaBj6DQIZ/p4HJrwLjhL59vZrndYp5InzGbItNgAKO9cObuzvsfVReh72KbSwJCb4UP6hYgn62Q5/snToXTVfk5gCLxxsywSVYPSIlsRvi4aWuYAk3od/5fucwTgaNPuRQ22V+Nrvdj/wuqqLgqFC+5LWoml2DiCUyaR8XOj2APfMbwjIXuWdzGcDjCY0MSepxw22AXqPRSH4fYv3r+1/bzFT+x0IplsawpHmIIo/KN1e509thl0/JzbgNQOG4zDTSAB8kiWeCqF3vch5a+quBc=
+    - MOLECULE_DEBUG: true
+    - ROLE_NAME: redis
+    - EC2_REGION: us-east-1
+    - secure: 19szmzIWxKkXrAJICCFO0qZCqrMlQ6YPn2kMlLliyDs/HZZ+yOFXpMNPOoHIaPpe4LKRtUKkRwbIOmWaCu7BTUX+LicWVaaImkC0jAWM5dRk2PZ4UX2cop2URovzdeWUELgDqpYKFgBifgt8jvLT2yE6MctIcE9CANvDZ7JX68D4dnWwqh+kGAOLRwrOHB7+t8NVyk/6MRgUxJly1PbG0K6eubFBfJ3N4Sah/mKwFlQtaW0cHlZfAKjACr+3Sdv8CJNWhWS3xd6BA505fh9317oGp09+zhQIihYQEnPdOHQW5wbFpKVm221xFN1coYV9sNxmQ3AL/bZTrORUljlHxbaBR1JT8FF6GUVjdeBumLG23ZyZKOgoME2xqjORWiM3vdd79dUn8atTrAoBMDorf0kTMxpy3MtCCuZtJ/WmJVyV95GjWhRikKUI/+GqLLlbghOS1tnh9Qb4ZzFF1yR8KclsZdxAtV5YwL45TkgS57q5kMWcb7WzkRq2hdHfgOjjrnthKDrG4JhrvpBsHvtWGKcGIGCB6hneyb9o58Vf7qD2db9bRpP9wVg4iC9jhVegUoHP36MhnMy3Y72ouqRqyZPSfR9CUaeE52XvKRs4slm58aR3Xv2/SgCFx4+dUOfnzNOD/PB9dDt8pjQbLW7yaS/LLEefY5JPFuQNdWoZ6fQ=
+    - secure: SMjxqEssxQlVTKgg8kngbU1nV6QLpb6H4B+Z0fUF/CZKcdCYL0dOA2PuZmdggWhs8xLzIu6XwRJ8csT5K6eTn+rFRYrbYlUuG3F9YHbLmINedZy76ZMUVr7XyyvD73Q0Et9kGKxWZ1bp8XCyDd5FH76ErIu0alQod8KRJ+HMuy8mtKrSAyrakONiQTp0FKRgpYAYyaPWM5GxDodrCE0y2d/bXYs6EaQA7g0aiRBJf8vIfRbKKjpGZzSoeyLhiR9GfgPIxtzuzryO/SPvx8sYITdhUFDv/ENRblUzVUzqhRT8YAcL+CNzpkJyQfeLHHVOZnHP35EKQ32vJ70NnzbnyYv8lRWL82C9MdmVo5rguEatLmx2HsUrGKLsCjIx+rEl6Y6vO2N6SaCMvtQqfhSrDaBj6DQIZ/p4HJrwLjhL59vZrndYp5InzGbItNgAKO9cObuzvsfVReh72KbSwJCb4UP6hYgn62Q5/snToXTVfk5gCLxxsywSVYPSIlsRvi4aWuYAk3od/5fucwTgaNPuRQ22V+Nrvdj/wuqqLgqFC+5LWoml2DiCUyaR8XOj2APfMbwjIXuWdzGcDjCY0MSepxw22AXqPRSH4fYv3r+1/bzFT+x0IplsawpHmIIo/KN1e509thl0/JzbgNQOG4zDTSAB8kiWeCqF3vch5a+quBc=
 install:
-- pip install pipenv
-- pipenv install
-- aws configure set aws_access_key_id $AWS_ACCESS_KEY
-- aws configure set aws_secret_access_key $AWS_SECRET_KEY
-- aws configure set default.region $EC2_REGION
-- aws configure list
-before_script:
-- cd ../
-- mv ansible-role-$ROLE_NAME nycrecords.$ROLE_NAME
-- cd nycrecords.$ROLE_NAME
+  - pip install pipenv
+  - pipenv install
+  - aws configure set aws_access_key_id $AWS_ACCESS_KEY
+  - aws configure set aws_secret_access_key $AWS_SECRET_KEY
+  - aws configure set default.region $EC2_REGION
+  - aws configure list
 script:
-- molecule create --scenario-name aws
-- molecule converge --scenario-name aws
-- molecule verify --scenario-name aws
-- molecule destroy --scenario-name aws
+  - molecule create --scenario-name aws
+  - molecule converge --scenario-name aws
+  - molecule verify --scenario-name aws
+  - molecule destroy --scenario-name aws
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
