@@ -8,7 +8,6 @@
   package:
     name: "{{ redis_package }}"
     state: present
-    enablerepo: "{{ redis_enablerepo | default(omit, true) }}"
 
 - name: Ensure Redis is configured.
   template:
