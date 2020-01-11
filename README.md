@@ -1,12 +1,17 @@
-# Ansible Role: Redis
+Ansible Role: Redis
+===================
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-redis.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-redis)
+![GitHub](https://img.shields.io/github/license/nycrecords/ansible-role-redis)
+[![Build Status](https://travis-ci.com/nycrecords/ansible-role-redis.svg?branch=master)](https://travis-ci.com/nycrecords/ansible-role-redis)
+[![Galaxy](https://img.shields.io/badge/galaxy-nycrecords.redis-blue.svg)](https://galaxy.ansible.com/nycrecords/redis)
+![Ansible](https://img.shields.io/ansible/role/d/44189)
+![Ansible](https://img.shields.io/ansible/quality/44189)
 
 Installs [Redis](http://redis.io/) on Linux.
 
 ## Requirements
 
-On RedHat-based distributions, requires the EPEL repository (you can simply add the role `geerlingguy.repo-epel` to install ensure EPEL is available).
+On RedHat-based distributions, requires the EPEL repository (you can simply add the role `geerlingguy.repo-epel` to install ensure EPEL is available) or a valid RedHat Subscription.
 
 ## Role Variables
 
@@ -116,5 +121,6 @@ MIT / BSD
 
 ## Author Information
 
-- [Joel Castillo](https://github.com/joelbcastillo)
-- This role was originally created in 2014 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+This role was originally created in 2014 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+
+Modified by [Joel Castillo](https://github.com/joelbcastillo) for the [NYC Department of Records and Information Services](https://github.com/nycrecords).
