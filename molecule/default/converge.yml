@@ -14,15 +14,6 @@
     rhsm_server_proxy_password: "{{ lookup('env', 'http_proxy_password') }}"
     rhsm_consumer_name: "nycrecords_{{ '%Y%m%d_%H%M%s' | strftime(ansible_date_time.epoch) }}"
 
-    # Role: yum_config_manager
-    repositories:
-      enabled:
-        - rhui-REGION-rhel-server-rhscl
-        - rhui-REGION-rhel-server-debug-rhscl
-
   roles:
-    - role: nycrecords.yum_config_manager
-      when: molecule_yml.driver.name == 'ec2'
     - role: nycrecords.rhsm
-      when: molecule_yml.driver.name == 'vagrant'
     - role: ansible-role-redis

@@ -27,5 +27,8 @@ provisioner:
         rhsub_password: ${RHSM_PASSWORD}
 verifier:
   name: testinfra
+  options:
+    verbose: true
+  directory: ../resources/tests/
   lint:
     name: flake8

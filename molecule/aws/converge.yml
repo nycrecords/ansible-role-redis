@@ -1,0 +1,15 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+
+  vars:
+    # Role: yum_config_manager
+    repositories:
+      enabled:
+        - rhui-REGION-rhel-server-rhscl
+        - rhui-REGION-rhel-server-debug-rhscl
+
+  roles:
+    - role: nycrecords.yum_config_manager
+    - role: ansible-role-redis
